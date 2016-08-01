@@ -761,7 +761,7 @@ public abstract class BaseDataBuffer implements DataBuffer {
         if(dataType() == Type.FLOAT) {
             dirty.set(false);
             if(indexer instanceof FloatIndexer) {
-                return ((FloatIndexer)indexer).get(offset() + i);
+                return (double) ((FloatIndexer)indexer).get(offset() + i);
 
             }
             else {
@@ -773,7 +773,7 @@ public abstract class BaseDataBuffer implements DataBuffer {
         else if(dataType() == Type.INT) {
             dirty.set(false);
             if(indexer instanceof IntIndexer) {
-                return ((IntIndexer)indexer).get(offset() + i);
+                return (double) ((IntIndexer)indexer).get(offset() + i);
 
             }
             else {
@@ -840,7 +840,7 @@ public abstract class BaseDataBuffer implements DataBuffer {
         else if(dataType() == Type.INT) {
             dirty.set(false);
             if(indexer instanceof  IntIndexer) {
-                return ((IntIndexer)indexer).get(offset() + i);
+                return (float) ((IntIndexer)indexer).get(offset() + i);
 
             }
             else {
@@ -878,7 +878,7 @@ public abstract class BaseDataBuffer implements DataBuffer {
             }
             else {
                 UByteRawIndexer other = (UByteRawIndexer) indexer;
-                return other.get(offset() + i);
+                return (other.get(offset() + i));
 
             }
         }
@@ -890,7 +890,7 @@ public abstract class BaseDataBuffer implements DataBuffer {
             }
             else {
                 UByteRawIndexer other = (UByteRawIndexer) indexer;
-                return other.get(offset() + i);
+                return (other.get(offset() + i));
 
             }
         }
@@ -901,7 +901,7 @@ public abstract class BaseDataBuffer implements DataBuffer {
             }
             else {
                 UByteRawIndexer other = (UByteRawIndexer) indexer;
-                return  other.get(offset() + i);
+                return other.get(offset() + i);
             }
         }
     }
